@@ -1,6 +1,19 @@
+import { AppProps } from "next/app";
+import { AppProvider } from "@/store";
 import "@/styles/globals.css";
-import type { AppProps } from "next/app";
+import ThemeCustomization from "@/themes/index";
+import DashboardLayout from "@/layout/Dashboard";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+  return (
+    <AppProvider>
+      <ThemeCustomization>
+          <DashboardLayout>
+            <Component {...pageProps} />
+          </DashboardLayout>
+      </ThemeCustomization>
+    </AppProvider>
+  );
 }
+
+export default MyApp;

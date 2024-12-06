@@ -1,8 +1,15 @@
-import type { NextConfig } from "next";
+/* eslint-disable @typescript-eslint/no-var-requires */
+const withTM = require('next-transpile-modules')([
+  '@ant-design/icons',
+  'rc-util',
+]);
 
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = withTM({
   reactStrictMode: true,
-};
+  images: {
+    domains: ['fakestoreapi.com'],
+  },
+});
 
-export default nextConfig;
+module.exports = nextConfig;

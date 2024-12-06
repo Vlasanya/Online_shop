@@ -166,3 +166,40 @@ a.secondary {
     filter: invert();
   }
 }
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card {
+  cursor: pointer;
+}
+
+.list .card {
+  display: flex;
+  gap: 20px;
+}
+
+.list .card img {
+  height: 100px;
+  width: 100px;
+}
+
+.mediumTile {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.largeTile {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+/* .wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: start;
+  min-width: 100%;
+} */
