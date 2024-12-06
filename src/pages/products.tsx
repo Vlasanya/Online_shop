@@ -19,6 +19,7 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
     const products: Product[] = await fetchProducts(limit, page);
     return { props: { products, error: null } };
   } catch (err) {
+    console.error(err); 
     return { props: { products: [], error: "Failed to fetch products" } };
   }
 };

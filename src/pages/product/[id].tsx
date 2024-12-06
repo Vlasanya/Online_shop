@@ -36,6 +36,7 @@ export const getServerSideProps: GetServerSideProps<
 
     return { props: { product, error: null } };
   } catch (err) {
+    console.error(err); 
     return {
       props: { product: null, error: "Failed to fetch product details" },
     };

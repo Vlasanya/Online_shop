@@ -18,6 +18,7 @@ const Categories: React.FC<CategoriesProps> = ({ onCategorySelect }) => {
         setCategories(fetchedCategories);
         setError(null);
       } catch (err) {
+        console.error(err); 
         setError("Failed to load categories");
       } finally {
         setLoading(false);
