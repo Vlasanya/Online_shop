@@ -37,7 +37,7 @@ export default function SettingTab() {
         <ListItemIcon>
           <QuestionCircleOutlined />
         </ListItemIcon>
-        <ListItemText primary="Support" />
+        <ListItemText primary="References" />
       </ListItemButton>
       <ListItemButton
         selected={selectedIndex === 1}

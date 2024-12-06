@@ -1,7 +1,7 @@
 import dashboard from "./dashboard";
 import pages from "./page";
 import utilities from "./utilities";
-import support from "./support";
+import references from "./references";
 
 export interface MenuItem {
   id: string;
@@ -25,5 +25,5 @@ export interface MenuItem {
 }
 
 export const menuItems: { items: MenuItem[] } = {
-  items: [dashboard, pages, utilities, support] as MenuItem[],
+  items: [dashboard, pages, utilities, references] as MenuItem[],
 };

@@ -4,9 +4,9 @@ import { MenuItem } from "./index";
 
 // ==============================|| MENU ITEMS - SAMPLE PAGE & DOCUMENTATION ||============================== //
 
-const support: MenuItem = {
-  id: 'support',
-  title: 'Support',
+const references: MenuItem = {
+  id: 'references',
+  title: 'References',
   type: 'group',
   children: [
     {
@@ -30,4 +30,4 @@ const support: MenuItem = {
   ]
 };
 
-export default support;
+export default references;
