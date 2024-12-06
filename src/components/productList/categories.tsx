@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box, Button, CircularProgress, Alert } from "@mui/material";
-import { fetchCategories } from "../services/api";
+import { fetchCategories } from "../../services/api";
 
 type CategoriesProps = {
   onCategorySelect: (category: string) => void;

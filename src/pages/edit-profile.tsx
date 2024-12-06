@@ -38,8 +38,6 @@ const EditProfile: React.FC = () => {
     ? users.find((user) => user.username === token)
     : null;
 
-  console.log("loggedInUser:", loggedInUser);
-
   const defaultValues: ProfileFormValues = {
     email: loggedInUser?.email || "",
     username: loggedInUser?.username || "",

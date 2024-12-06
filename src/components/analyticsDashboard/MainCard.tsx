@@ -1,5 +1,4 @@
 import React, { forwardRef, ReactNode } from "react";
-// import { useTheme, Theme } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
@@ -28,24 +27,17 @@ const headerSX = {
 const MainCard = forwardRef<HTMLDivElement, MainCardProps>(
   (
     {
-      // border = true,
-      // boxShadow,
       children,
       content = true,
       contentSX = {},
       darkTitle,
       elevation,
       secondary,
-      // shadow,
-      // sx = {},
       title,
       ...others
     },
     ref
   ) => {
-    // const theme = useTheme<Theme>();
-    // const resolvedBoxShadow =
-    //   theme.palette.mode === "dark" ? boxShadow || true : boxShadow;
 
     return (
       <Box

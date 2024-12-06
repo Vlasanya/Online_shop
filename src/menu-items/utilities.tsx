@@ -1,4 +1,3 @@
-// assets
 import {
   AppstoreAddOutlined,
   AntDesignOutlined,
@@ -8,8 +7,8 @@ import {
   LoadingOutlined
 } from '@ant-design/icons';
 import { MenuItem } from "./index";
+import StorefrontIcon from '@mui/icons-material/Storefront';
 
-// icons
 const icons = {
   FontSizeOutlined,
   BgColorsOutlined,
@@ -31,7 +30,7 @@ const utilities: MenuItem = {
       title: 'Products',
       type: 'item',
       url: '/products',
-      icon: icons.FontSizeOutlined
+      icon: StorefrontIcon
     },
     {
       id: 'util-color',

@@ -1,4 +1,3 @@
-// import PropTypes from 'prop-types';
 
 // ==============================|| CUSTOM FUNCTION - COLOR SHADOWS ||============================== //
 
@@ -31,9 +30,5 @@ const getShadow = (theme, shadow) => {
   }
 };
 
-// getShadow.propTypes = {
-//   theme: PropTypes.object,
-//   shadow: PropTypes.string
-// };
 
 export default getShadow;

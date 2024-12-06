@@ -1,8 +1,6 @@
-// assets
 import { DashboardOutlined } from '@ant-design/icons';
 import { MenuItem } from "./index";
 
-// icons
 const icons = {
   DashboardOutlined
 };
@@ -12,12 +10,12 @@ const icons = {
 const dashboard: MenuItem = {
   id: "group-dashboard",
   title: "Navigation",
-  type: "group" as const, // Explicitly define the type
+  type: "group" as const,
   children: [
     {
       id: "dashboard",
       title: "Dashboard",
-      type: "item" as const, // Explicitly define the type
+      type: "item" as const,
       url: "/",
       icon: icons.DashboardOutlined,
       breadcrumbs: false,

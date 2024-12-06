@@ -1,8 +1,6 @@
-// assets
 import { LoginOutlined, ProfileOutlined } from '@ant-design/icons';
 import { MenuItem } from "./index";
 
-// icons
 const icons = {
   LoginOutlined,
   ProfileOutlined

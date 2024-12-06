@@ -108,7 +108,6 @@ a.secondary {
   flex-shrink: 0;
 }
 
-/* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {
     background: var(--button-primary-hover);
@@ -197,9 +196,3 @@ a.secondary {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
-/* .wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: start;
-  min-width: 100%;
-} */

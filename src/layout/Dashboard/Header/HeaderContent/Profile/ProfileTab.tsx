@@ -2,20 +2,17 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
-// Material-UI
 import List from "@mui/material/List";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 
-// Icons
 import EditOutlined from "@ant-design/icons/EditOutlined";
 import ProfileOutlined from "@ant-design/icons/ProfileOutlined";
 import LogoutOutlined from "@ant-design/icons/LogoutOutlined";
 import UserOutlined from "@ant-design/icons/UserOutlined";
 import WalletOutlined from "@ant-design/icons/WalletOutlined";
 
-// Component Props Interface
 interface ProfileTabProps {
   handleLogout?: () => void;
 }

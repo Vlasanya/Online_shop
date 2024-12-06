@@ -1,11 +1,8 @@
 import { useEffect, ReactNode } from 'react';
 
-// material-ui
-// import useMediaQuery from '@mui/material/useMediaQuery';
 import Toolbar from '@mui/material/Toolbar';
 import Box from '@mui/material/Box';
 
-// project import
 import Drawer from './Drawer';
 import Header from './Header';
 import Loader from '@/components/Loader';
@@ -20,21 +17,12 @@ interface DashboardLayoutProps {
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
   const { menuMasterLoading, menuMaster } = useGetMenuMaster();
-  // const downXL = useMediaQuery((theme) => theme.breakpoints.down('xl'));
 
   useEffect(() => {
-    // Initialize the Drawer state to false
     if (menuMaster === undefined) {
       handlerDrawerOpen(false);
     }
-  }, [menuMaster]);
-  
-  // useEffect(() => {
-  //   // Update the Drawer state based on screen size after initialization
-  //   if (menuMaster) {
-  //     handlerDrawerOpen(!downXL);
-  //   }
-  // }, [downXL, menuMaster]);  
+  }, [menuMaster]);  
 
   if (menuMasterLoading) return <Loader />;
 

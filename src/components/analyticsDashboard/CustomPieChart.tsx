@@ -63,7 +63,7 @@ const CustomPieChart: React.FC = () => {
               },
             },
           ]}
-          height={isSmallScreen ? 300 : 200} 
+          height={isSmallScreen ? 300 : 200}
           sx={{ minWidth: isSmallScreen ? 300 : 350 }}
         />
       </Box>

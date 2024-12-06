@@ -25,9 +25,7 @@ export default function CategorySelect({
           onChange={handleCategoryChange}
           label="Category"
         >
-          {/* "All" option */}
           <MenuItem value="">All</MenuItem>
-          {/* Dynamically render categories */}
           {categories.map((category) => (
             <MenuItem key={category} value={category}>
               {category}

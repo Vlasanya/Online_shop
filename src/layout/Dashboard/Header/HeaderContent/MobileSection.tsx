@@ -1,7 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-
-// material-ui
-// import { useTheme } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 import Paper from '@mui/material/Paper';
@@ -10,18 +7,14 @@ import Popper from '@mui/material/Popper';
 import Toolbar from '@mui/material/Toolbar';
 import Box from '@mui/material/Box';
 
-// project import
-// import Search from './Search';
 import Profile from './Profile';
 import Transitions from '@/components/@extended/Transitions';
 
-// assets
 import MoreOutlined from '@ant-design/icons/MoreOutlined';
 
 // ==============================|| HEADER CONTENT - MOBILE ||============================== //
 
 export default function MobileSection() {
-  // const theme = useTheme();
 
   const [open, setOpen] = useState(false);
   const anchorRef = useRef<HTMLButtonElement>(null);
@@ -37,7 +30,6 @@ export default function MobileSection() {
     }
     setOpen(false);
   };
-  
 
   const prevOpen = useRef(open);
   useEffect(() => {
@@ -61,7 +53,6 @@ export default function MobileSection() {
           aria-haspopup="true"
           onClick={handleToggle}
           color="secondary"
-          // variant="light"
         >
           <MoreOutlined />
         </IconButton>
@@ -88,12 +79,10 @@ export default function MobileSection() {
         {({ TransitionProps }) => (
           <Transitions type="fade" in={open} {...TransitionProps}>
             <Paper 
-            // sx={{ boxShadow: theme.customShadows.z1 }}
             >
               <ClickAwayListener onClickAway={handleClose}>
                 <AppBar color="inherit">
                   <Toolbar>
-                    {/* <Search /> */}
                     <Profile />
                   </Toolbar>
                 </AppBar>

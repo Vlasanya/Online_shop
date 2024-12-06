@@ -1,7 +1,6 @@
 import React, { ReactNode, forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-// Material-UI
 import Collapse, { CollapseProps } from '@mui/material/Collapse';
 import Fade, { FadeProps } from '@mui/material/Fade';
 import Grow, { GrowProps } from '@mui/material/Grow';
@@ -24,7 +23,6 @@ interface TransitionsProps {
   type?: TransitionType;
   direction?: 'up' | 'right' | 'left' | 'down';
   timeout?: number;
-  // [key: string]: any; // To allow additional props
 }
 
 const transitions = forwardRef<HTMLDivElement, TransitionsProps>(

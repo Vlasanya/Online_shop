@@ -10,7 +10,6 @@ const ViewProfile: React.FC = () => {
   const loggedInUser = Array.isArray(users)
     ? users.find((user) => user.username === token)
     : null;
-console.log("loggedInUser:", loggedInUser);
 
   if (!loggedInUser) {
     return (

@@ -1,11 +1,8 @@
-// material-ui
 import { styled, Theme } from '@mui/material/styles';
 import Drawer, { DrawerProps } from '@mui/material/Drawer';
 
-// project import
 import { drawerWidth } from '@/config';
 
-// Define the mixins with proper typing
 const openedMixin = (theme: Theme): React.CSSProperties => ({
   width: drawerWidth,
   borderRight: '1px solid',

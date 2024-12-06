@@ -18,7 +18,7 @@ import Search from "./Search";
 import ProductSort from "./ProductSort";
 import CategorySelect from "./CategorySelect";
 
-import DisplayModeToggle from "@/components/displayModeToggle";
+import DisplayModeToggle from "@/components/productList/displayModeToggle";
 
 const ProductList = ({
   initialProducts = [],
@@ -83,7 +83,7 @@ const ProductList = ({
   useEffect(() => {
     loadProducts(1);
     setPage(1);
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentCategory, sort]);
 
   const handlePageChange = (_: React.ChangeEvent<unknown>, value: number) => {

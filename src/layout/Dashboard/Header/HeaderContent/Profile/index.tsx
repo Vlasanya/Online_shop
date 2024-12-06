@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useAppDispatch, useAppState } from "@/store";
 import { useRouter } from "next/router";
 
-// Material-UI
 import Box from "@mui/material/Box";
 import ButtonBase from "@mui/material/ButtonBase";
 import Avatar from "@mui/material/Avatar";
@@ -15,7 +14,6 @@ import ProfileTab from "./ProfileTab";
 
 const Profile: React.FC = () => {
   const { isAuthenticated, users, token } = useAppState();
-  console.log('users:', users);
   const dispatch = useAppDispatch();
   const router = useRouter();
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import AnalyticEcommerce from "./cards/statistics/AnalyticEcommerce";
+import AnalyticEcommerce from "@/components/cards/statistics/AnalyticEcommerce";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import UniqueVisitorCard from "./UniqueVisitorCard";

@@ -1,14 +1,12 @@
 import PropTypes from "prop-types";
 
-// material-ui
 import { styled } from "@mui/material/styles";
 import AppBar, { AppBarProps }  from "@mui/material/AppBar";
 
-// project import
 import { drawerWidth } from "@/config";
 
 interface AppBarStyledProps extends AppBarProps {
-  open?: boolean; // Define the custom 'open' prop
+  open?: boolean;
 }
 
 // ==============================|| HEADER - APP BAR STYLED ||============================== //

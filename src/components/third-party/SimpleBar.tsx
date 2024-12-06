@@ -1,22 +1,18 @@
 import PropTypes from 'prop-types';
 import React, { ReactNode } from 'react';
 
-// material-ui
 import { alpha, styled, SxProps, Theme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 
-// third-party
 import SimpleBar from 'simplebar-react';
 import { BrowserView, MobileView } from 'react-device-detect';
 
-// root style
 const RootStyle = styled(BrowserView)({
   flexGrow: 1,
   height: '100%',
   overflow: 'hidden'
 });
 
-// scroll bar wrapper
 const SimpleBarStyle = styled(SimpleBar)(({ theme }) => ({
   maxHeight: '100%',
   '& .simplebar-scrollbar': {
@@ -41,7 +37,7 @@ const SimpleBarStyle = styled(SimpleBar)(({ theme }) => ({
 interface SimpleBarScrollProps {
   children: ReactNode;
   sx?: SxProps<Theme>;
-  [key: string]: unknown; // Allow other props
+  [key: string]: unknown;
 }
 // ==============================|| SIMPLE SCROLL BAR ||============================== //
 
