@@ -54,3 +54,11 @@ export const fetchProducts = async (
     return data;
   };
   
+  export const fetchCart = async (userId: number) => {
+    const response = await fetch(`https://fakestoreapi.com/carts/user/${userId}`);
+    if (!response.ok) {
+      throw new Error("Failed to fetch cart");
+    }
+    return response.json();
+  };
+  

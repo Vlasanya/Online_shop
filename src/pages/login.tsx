@@ -9,6 +9,8 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import { fetchCart } from "@/services/api";
+import { User } from "@/store/reduser";
 
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -47,6 +49,16 @@ const Login: React.FC = () => {
 
       const userDetails = await fetchUsers();
       dispatch({ type: "SET_USER_DETAILS", payload: userDetails });
+
+      const loggedInUser = userDetails.find(
+        (user: User) => user.username === data.username
+      );
+      if (!loggedInUser || !loggedInUser.id) {
+        throw new Error("User details not found");
+      }
+
+      const cart = await fetchCart(loggedInUser.id);
+      dispatch({ type: "SET_CART", payload: cart });
 
       router.push("/");
     } catch (err) {

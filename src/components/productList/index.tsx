@@ -10,14 +10,15 @@ import {
   Pagination,
 } from "@mui/material";
 import { Product } from "@/store/reduser";
-import { useAppState } from "@/store";
+import { useAppState, useAppDispatch } from "@/store";
 import styles from "@/styles/Home.module.css";
 import { useRouter } from "next/router";
 import { fetchProducts, fetchCategories } from "@/services/api";
 import Search from "./Search";
 import ProductSort from "./ProductSort";
 import CategorySelect from "./CategorySelect";
-
+import IconButton from "@mui/material/IconButton";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import DisplayModeToggle from "@/components/productList/displayModeToggle";
 
 const ProductList = ({
@@ -29,7 +30,7 @@ const ProductList = ({
 }) => {
   const { displayMode } = useAppState();
   const router = useRouter();
-
+  const dispatch = useAppDispatch();
   const [products, setProducts] = useState<Product[]>(initialProducts);
   const [error, setError] = useState<string | null>(initialError);
   const [page, setPage] = useState<number>(1);
@@ -95,6 +96,12 @@ const ProductList = ({
     product.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  const handleAddToCart = (productId: number) => {
+    console.log("Adding product to cart with ID:", productId);
+    console.log("Current quantity:", 1);
+    dispatch({ type: "ADD_TO_CART", payload: { productId, quantity: 1 } });
+  };
+
   const productStyle =
     displayMode === "list"
       ? styles.list
@@ -144,6 +151,12 @@ const ProductList = ({
                 <Typography variant="h6">{product.title}</Typography>
                 <Typography variant="body1">${product.price}</Typography>
               </CardContent>
+              <IconButton
+                color="primary"
+                onClick={() => handleAddToCart(product.id)}
+              >
+                <AddShoppingCartIcon />
+              </IconButton>
             </Card>
           ))}
         </Box>

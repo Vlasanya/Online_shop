@@ -16,7 +16,9 @@ interface ThemeCustomizationProps {
   children: ReactNode;
 }
 
-export default function ThemeCustomization({ children }: ThemeCustomizationProps) {
+export default function ThemeCustomization({
+  children,
+}: ThemeCustomizationProps) {
   const { theme: currentTheme } = useAppState();
 
   const themeOptions: ThemeOptions = useMemo(() => {
@@ -34,7 +36,10 @@ export default function ThemeCustomization({ children }: ThemeCustomizationProps
       },
     };
 
-    const typography = createTypography("'Public Sans', sans-serif", basePalette);
+    const typography = createTypography(
+      "'Public Sans', sans-serif",
+      basePalette
+    );
     const customShadows = CustomShadows(createTheme({ palette: basePalette }));
 
     return {

@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Profile from "./Profile";
 import Notification from "./Notification";
 import MobileSection from "./MobileSection";
+import Cart from "@/components/cart";
 
 // ==============================|| HEADER - CONTENT ||============================== //
 
@@ -13,9 +14,10 @@ export default function HeaderContent() {
   return (
     <>
       {downLG && <Box sx={{ width: "100%", ml: 1 }} />}
-
+      
       <ThemeToggle />
       <Notification />
+      <Cart />
       {!downLG && <Profile />}
       {downLG && <MobileSection />}
     </>
