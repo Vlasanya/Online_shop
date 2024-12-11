@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, MutableRefObject } from "react";
 import {
   Box,
   Card,
@@ -69,7 +69,7 @@ const ProductList = ({
     },
     disabled: !infiniteScrollMode || loading,
     rootMargin: "0px 0px 400px 0px",
-  });
+  }) as [MutableRefObject<HTMLDivElement | null>];
 
   const loadProducts = async (page: number, limit: number, append = false) => {
     setLoading(true);
